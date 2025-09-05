@@ -10,13 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.aula.workshop_mongo.dto.AuthorDTO;
 
 @Document
-<<<<<<< HEAD
 public class Post implements Serializable{
 	
-=======
-public class Post implements Serializable {
-
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -69,11 +64,7 @@ public class Post implements Serializable {
 	public void setBody(String body) {
 		this.body = body;
 	}
-<<<<<<< HEAD
 
-=======
-	
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
 	public AuthorDTO getAuthor() {
 		return author;
 	}
@@ -98,10 +89,5 @@ public class Post implements Serializable {
 		Post other = (Post) obj;
 		return Objects.equals(id, other.id);
 	}
-<<<<<<< HEAD
-=======
-
-	
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
 	
 }

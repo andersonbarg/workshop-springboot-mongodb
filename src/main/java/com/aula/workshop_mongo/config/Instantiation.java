@@ -10,10 +10,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.aula.workshop_mongo.domain.Post;
 import com.aula.workshop_mongo.domain.User;
-<<<<<<< HEAD
 import com.aula.workshop_mongo.dto.AuthorDTO;
-=======
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
 import com.aula.workshop_mongo.repositories.PostRepository;
 import com.aula.workshop_mongo.repositories.UserRepository;
 
@@ -31,10 +28,7 @@ public class Instantiation implements CommandLineRunner{
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
-<<<<<<< HEAD
-		
-=======
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
+
 		userRepository.deleteAll();
 		postRepository.deleteAll();
 		
@@ -47,13 +41,11 @@ public class Instantiation implements CommandLineRunner{
 		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abraços.", new AuthorDTO(maria));
 		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(maria));
 		
-<<<<<<< HEAD
-		Post post1 = new Post(null, sdf.parse("21/03/2018"), "Partiu viagem", "Vou viajar para São Paulo. Abraços.", new AuthorDTO(maria));
-		Post post2 = new Post(null, sdf.parse("23/03/2018"), "Bom dia", "Acordei feliz hoje!", new AuthorDTO(maria));
-		
-=======
->>>>>>> 804ed01df279595a6125b4d968f4e3d09137d4d5
 		postRepository.saveAll(Arrays.asList(post1, post2));
+		
+		maria.getPosts().addAll(Arrays.asList(post1, post2));
+		
+		userRepository.save(maria);
 	}
 
 }
